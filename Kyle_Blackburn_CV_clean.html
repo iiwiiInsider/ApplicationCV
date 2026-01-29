@@ -185,6 +185,19 @@
       border-radius: 12px;
     }
 
+    .qualification-right {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn.small {
+      padding: 0.5rem 0.9rem;
+      font-size: 0.85rem;
+    }
+
     .qualification-item.in-progress {
       opacity: 0.65;
       filter: grayscale(0.2);
@@ -445,12 +458,37 @@
       <div class="section-header"><h2>Qualifications</h2></div>
 
       <div class="qualification-list">
-        <div class="qualification-item">
+        <div class="qualification-item" data-pdf="Completion%20Full-Stack%20Web%20Developer%20Certificate.pdf">
           <div>
-            <div class="qualification-title">Web Development / Blockchain Engineering</div>
-            <div class="qualification-meta">Motoko · JavaScript · HTML/CSS · Node.js</div>
+            <div class="qualification-title">Full-Stack Web Developer Certificate (Completion)</div>
+            <div class="qualification-meta">PDF available below</div>
           </div>
-          <span class="status-badge complete">Complete</span>
+          <div class="qualification-right">
+            <button class="btn ghost small" type="button" data-qual-pdf="Completion%20Full-Stack%20Web%20Developer%20Certificate.pdf">View PDF</button>
+            <span class="status-badge complete">Complete</span>
+          </div>
+        </div>
+
+        <div class="qualification-item" data-pdf="Matric%20Certificate%20-%20Kyle.pdf">
+          <div>
+            <div class="qualification-title">Matric Certificate</div>
+            <div class="qualification-meta">PDF available below</div>
+          </div>
+          <div class="qualification-right">
+            <button class="btn ghost small" type="button" data-qual-pdf="Matric%20Certificate%20-%20Kyle.pdf">View PDF</button>
+            <span class="status-badge complete">Complete</span>
+          </div>
+        </div>
+
+        <div class="qualification-item" data-pdf="SSETA%20-%20FETC%20Real%20estate%20Level%2004%20%28Certificate%20of%20competence%29.pdf">
+          <div>
+            <div class="qualification-title">SSETA — FETC Real Estate Level 04 (Certificate of Competence)</div>
+            <div class="qualification-meta">PDF available below</div>
+          </div>
+          <div class="qualification-right">
+            <button class="btn ghost small" type="button" data-qual-pdf="SSETA%20-%20FETC%20Real%20estate%20Level%2004%20%28Certificate%20of%20competence%29.pdf">View PDF</button>
+            <span class="status-badge complete">Complete</span>
+          </div>
         </div>
 
         <div class="qualification-item in-progress">
@@ -458,7 +496,9 @@
             <div class="qualification-title">Cyber Security Analyst</div>
             <div class="qualification-meta">In progress</div>
           </div>
-          <span class="status-badge in-progress">In progress</span>
+          <div class="qualification-right">
+            <span class="status-badge in-progress">In progress</span>
+          </div>
         </div>
 
         <div class="qualification-item in-progress">
@@ -466,7 +506,9 @@
             <div class="qualification-title">Adobe Suite</div>
             <div class="qualification-meta">In progress</div>
           </div>
-          <span class="status-badge in-progress">In progress</span>
+          <div class="qualification-right">
+            <span class="status-badge in-progress">In progress</span>
+          </div>
         </div>
       </div>
 
@@ -633,6 +675,15 @@
     if (qualPdfSelect) {
       qualPdfSelect.addEventListener('change', () => setQualificationsPdf(qualPdfSelect.value));
     }
+
+    document.querySelectorAll('[data-qual-pdf]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const file = btn.getAttribute('data-qual-pdf');
+        if (qualPdfSelect && file) qualPdfSelect.value = file;
+        setQualificationsPdf(file);
+        if (qualPdfViewer) qualPdfViewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
 
     [...tabs, ...heroButtons].forEach(btn => {
       btn.addEventListener('click', () => activateSection(btn.dataset.target));
