@@ -28,3 +28,10 @@ landsdowne_base64.txt
 # Local media exports
 WhatsApp Image *.jpeg
 WhatsApp Video *.mp4
+
+# Allow the specific profile photo used by the site
+!WhatsApp Image 2026-01-29 at 4.11.45 PM.jpeg
+
+# Portable share package (generated)
+share/
+Kyle_Blackburn_CV_share.zip

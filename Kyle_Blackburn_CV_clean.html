@@ -57,6 +57,14 @@
       color: var(--accent);
     }
 
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
     .hero-text h1 {
       font-size: 3rem;
       font-weight: 800;
@@ -636,7 +644,9 @@
 <body>
   <header class="hero">
     <div class="hero-content">
-      <div class="hero-image">KB</div>
+      <div class="hero-image">
+        <img src="WhatsApp%20Image%202026-01-29%20at%204.11.45%20PM.jpeg" alt="Profile photo" />
+      </div>
       <div class="hero-text">
         <h1>Kyle Blackburn</h1>
         <div>
@@ -959,11 +969,11 @@
 
     const roadmapSteps = [
       { id: 'token-spec', title: 'Token spec + tokenomics', meta: 'Supply, utility, distribution, fees', status: 'todo' },
-      { id: 'contract', title: 'Token contract build', meta: 'Standards, tests, deploy plan', status: 'doing' },
-      { id: 'mint-deploy', title: 'Mint + deploy token', meta: 'Network, verification, holders', status: 'doing' },
-      { id: 'liquidity', title: 'Liquidity + listing', meta: 'DEX pool, pricing, LP strategy', status: 'todo' },
-      { id: 'trading-mvp', title: 'Trading platform MVP', meta: 'Core trade flows, charts, orders', status: 'doing' },
-      { id: 'security', title: 'Security + monitoring', meta: 'Audit, rate limits, alerts', status: 'todo' },
+      { id: 'contract', title: 'Token contract build', meta: 'Standards, tests, deploy plan', status: 'done' },
+      { id: 'mint-deploy', title: 'Mint + deploy token', meta: 'Network, verification, holders', status: 'done' },
+      { id: 'liquidity', title: 'Liquidity + listing', meta: 'DEX pool, pricing, LP strategy', status: 'doing' },
+      { id: 'trading-mvp', title: 'Trading platform MVP', meta: 'Core trade flows, charts, orders', status: 'done' },
+      { id: 'security', title: 'Security + monitoring', meta: 'Audit, rate limits, alerts', status: 'doing' },
       { id: 'mobile', title: 'Mobile app (iOS/Android)', meta: 'Portfolio, trades, notifications', status: 'todo' },
       { id: 'desktop', title: 'Desktop app', meta: 'Power tools, faster trading UX', status: 'todo' }
     ];
