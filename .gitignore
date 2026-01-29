@@ -1,6 +1,30 @@
 .env
 .dfx/
+dfx.json
+canister_ids.json
 node_modules/
 dist/
 build/
 *.log
+
+# Local/generated helpers (keep repo clean)
+DEPLOYMENT_SUCCESS.md
+README_CANISTER.md
+Kyle_Blackburn_CV.html
+index.html
+script.js
+styles.css
+src/
+generate_pptx.py
+upload_certificates.html
+upload_certs.sh
+gadget_base64.txt
+landsdowne_base64.txt
+
+# Office/source files not part of the site
+*.pptx
+*.tex
+
+# Local media exports
+WhatsApp Image *.jpeg
+WhatsApp Video *.mp4
