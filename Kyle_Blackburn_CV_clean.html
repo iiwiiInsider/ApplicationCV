@@ -343,6 +343,44 @@
       stroke-width: 1;
     }
 
+    .rm-conn {
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 2;
+      opacity: 0.9;
+    }
+
+    .rm-conn.todo {
+      stroke: rgba(148, 163, 184, 0.35);
+      stroke-width: 2;
+      opacity: 0.55;
+    }
+
+    .rm-conn.doing {
+      stroke: rgba(34, 197, 94, 0.85);
+      stroke-width: 3;
+      stroke-dasharray: 6 6;
+      animation: rm-dash 1.4s linear infinite;
+      filter: drop-shadow(0 0 4px rgba(34, 197, 94, 0.25));
+    }
+
+    .rm-conn.done {
+      stroke: rgba(34, 197, 94, 0.95);
+      stroke-width: 4;
+      animation: rm-conn-pulse 1.25s ease-in-out infinite;
+      filter: drop-shadow(0 0 6px rgba(34, 197, 94, 0.35));
+    }
+
+    @keyframes rm-conn-pulse {
+      0% { opacity: 0.55; filter: drop-shadow(0 0 2px rgba(34, 197, 94, 0.20)); }
+      50% { opacity: 1; filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.55)); }
+      100% { opacity: 0.65; filter: drop-shadow(0 0 3px rgba(34, 197, 94, 0.25)); }
+    }
+
+    @keyframes rm-dash {
+      to { stroke-dashoffset: -24; }
+    }
+
     .rm-goal {
       cursor: default;
     }
@@ -1001,6 +1039,12 @@
         const angle = (Math.PI * 2 * idx) / roadmapSteps.length - Math.PI / 2;
         const x = cx + Math.cos(angle) * outer;
         const y = cy + Math.sin(angle) * outer;
+
+        // Status connector line to main goal
+        const conn = elNS('line');
+        conn.setAttribute('class', `rm-conn ${step.status}`);
+        setAttrs(conn, { x1: cx, y1: cy, x2: x, y2: y });
+        roadmapSvg.appendChild(conn);
 
         const g = elNS('g');
         g.setAttribute('class', `rm-node ${step.status}`);
