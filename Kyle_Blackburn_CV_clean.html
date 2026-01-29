@@ -329,6 +329,7 @@
       border-radius: 12px;
       border: 1px solid var(--border);
       background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.10) 0%, rgba(11, 18, 32, 0.0) 70%);
+      overflow: visible;
     }
 
     .rm-grid {
@@ -812,7 +813,7 @@
             Click a step to cycle status: <strong>To do → In progress → Complete</strong>.
           </div>
 
-          <svg id="roadmapSpider" class="roadmap-svg" viewBox="0 0 760 520" role="img" aria-label="Roadmap spider diagram with step status">
+          <svg id="roadmapSpider" class="roadmap-svg" viewBox="-140 -70 1040 660" role="img" aria-label="Roadmap spider diagram with step status">
             <title>Roadmap spider diagram</title>
           </svg>
 
@@ -1012,8 +1013,8 @@
       while (roadmapSvg.firstChild) roadmapSvg.removeChild(roadmapSvg.firstChild);
 
       const vb = roadmapSvg.viewBox.baseVal;
-      const cx = vb.width / 2;
-      const cy = vb.height / 2;
+      const cx = vb.x + vb.width / 2;
+      const cy = vb.y + vb.height / 2;
       const rings = [70, 140, 210, 240];
 
       drawGrid(roadmapSvg, cx, cy, rings, roadmapSteps.length);
