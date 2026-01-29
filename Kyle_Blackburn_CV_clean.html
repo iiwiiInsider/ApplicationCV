@@ -253,6 +253,212 @@
       background: #0b1220;
     }
 
+    .roadmap-wrap {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    .roadmap-card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .roadmap-subtitle {
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .roadmap-legend {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      border: 2px solid var(--border);
+      display: inline-block;
+      background: transparent;
+    }
+
+    .legend-dot.done {
+      border-color: rgba(34, 197, 94, 0.75);
+      background: rgba(34, 197, 94, 0.18);
+      position: relative;
+    }
+
+    .legend-dot.todo {
+      border-color: rgba(148, 163, 184, 0.75);
+      background: rgba(148, 163, 184, 0.06);
+    }
+
+    .legend-dot.doing {
+      border-color: rgba(34, 197, 94, 0.9);
+      background: rgba(34, 197, 94, 0.55);
+      position: relative;
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.35);
+      animation: pulse-green 1.2s ease-out infinite;
+    }
+
+    @keyframes pulse-green {
+      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.35); }
+      70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+
+    .roadmap-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.10) 0%, rgba(11, 18, 32, 0.0) 70%);
+    }
+
+    .rm-grid {
+      stroke: rgba(71, 85, 105, 0.55);
+      stroke-width: 1;
+      fill: none;
+    }
+
+    .rm-spoke {
+      stroke: rgba(71, 85, 105, 0.65);
+      stroke-width: 1;
+    }
+
+    .rm-goal {
+      cursor: default;
+    }
+
+    .rm-node {
+      cursor: pointer;
+    }
+
+    .rm-node text,
+    .rm-goal text {
+      fill: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .rm-node .meta,
+    .rm-goal .meta {
+      fill: var(--text-muted);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .rm-node circle.base {
+      stroke: rgba(148, 163, 184, 0.75);
+      stroke-width: 2;
+      fill: rgba(148, 163, 184, 0.06);
+    }
+
+    .rm-node.todo circle.base {
+      stroke: rgba(148, 163, 184, 0.75);
+      fill: rgba(148, 163, 184, 0.06);
+    }
+
+    .rm-node.done circle.base {
+      stroke: rgba(34, 197, 94, 0.85);
+      fill: rgba(34, 197, 94, 0.16);
+    }
+
+    .rm-node.doing circle.base {
+      stroke: rgba(34, 197, 94, 0.95);
+      fill: rgba(34, 197, 94, 0.55);
+    }
+
+    .rm-node circle.pulse {
+      stroke: rgba(34, 197, 94, 0.45);
+      stroke-width: 2;
+      fill: rgba(34, 197, 94, 0.12);
+      transform-origin: center;
+      opacity: 0;
+    }
+
+    .rm-node.doing circle.pulse {
+      opacity: 1;
+      animation: rm-pulse 1.2s ease-out infinite;
+    }
+
+    @keyframes rm-pulse {
+      0% { transform: scale(1); opacity: 0.65; }
+      100% { transform: scale(1.55); opacity: 0; }
+    }
+
+    .rm-check {
+      stroke: rgba(34, 197, 94, 0.95);
+      stroke-width: 3;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .rm-node.todo .rm-check,
+    .rm-node.doing .rm-check {
+      display: none;
+    }
+
+    .rm-node.done .rm-check {
+      display: block;
+    }
+
+    .roadmap-list {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .roadmap-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.35);
+      cursor: pointer;
+    }
+
+    .roadmap-item:hover {
+      background: rgba(59, 130, 246, 0.08);
+    }
+
+    .roadmap-item-title {
+      font-weight: 800;
+    }
+
+    .roadmap-item-meta {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 0.2rem;
+    }
+
+    .roadmap-item.todo { opacity: 0.78; }
+    .roadmap-item.done { border-color: rgba(34, 197, 94, 0.45); }
+    .roadmap-item.doing { border-color: rgba(34, 197, 94, 0.65); }
+
+    @media (max-width: 920px) {
+      .roadmap-wrap { grid-template-columns: 1fr; }
+    }
+
     #summary .section-header:not(:first-child) {
       margin-top: 1.25rem;
     }
@@ -597,7 +803,32 @@
 
     <section id="roadmap" class="section">
       <div class="section-header"><h2>Roadmap</h2></div>
-      <p>Focused on completing advanced Motoko, Web3, and production-grade UI systems, plus on-site production setups and ready states for events or on-site work.</p>
+
+      <div class="roadmap-wrap">
+        <div class="roadmap-card">
+          <div class="roadmap-subtitle">
+            Main goal: <strong>Mint my own crypto token</strong> and launch a <strong>working trading platform</strong> with more tokens to invest in — on <strong>mobile</strong> and <strong>desktop</strong>.
+            <br />
+            Click a step to cycle status: <strong>To do → In progress → Complete</strong>.
+          </div>
+
+          <svg id="roadmapSpider" class="roadmap-svg" viewBox="0 0 760 520" role="img" aria-label="Roadmap spider diagram with step status">
+            <title>Roadmap spider diagram</title>
+          </svg>
+
+          <div class="roadmap-legend" aria-label="Legend">
+            <span class="legend-item"><span class="legend-dot todo"></span>To do</span>
+            <span class="legend-item"><span class="legend-dot doing"></span>In progress</span>
+            <span class="legend-item"><span class="legend-dot done"></span>Complete</span>
+            <button id="roadmapReset" class="btn ghost small" type="button">Reset statuses</button>
+          </div>
+        </div>
+
+        <div class="roadmap-card">
+          <div class="roadmap-subtitle">Status checker</div>
+          <div id="roadmapList" class="roadmap-list" aria-label="Roadmap steps list"></div>
+        </div>
+      </div>
     </section>
 
     <section id="certs" class="section">
@@ -688,6 +919,220 @@
     [...tabs, ...heroButtons].forEach(btn => {
       btn.addEventListener('click', () => activateSection(btn.dataset.target));
     });
+
+    // --- Roadmap: spider diagram + status checker ---
+    const ROADMAP_STORAGE_KEY = 'kylecv.roadmap.status.v1';
+    const roadmapSvg = document.getElementById('roadmapSpider');
+    const roadmapList = document.getElementById('roadmapList');
+    const roadmapResetBtn = document.getElementById('roadmapReset');
+
+    const roadmapSteps = [
+      { id: 'token-spec', title: 'Token spec + tokenomics', meta: 'Supply, utility, distribution, fees', status: 'todo' },
+      { id: 'contract', title: 'Token contract build', meta: 'Standards, tests, deploy plan', status: 'todo' },
+      { id: 'mint-deploy', title: 'Mint + deploy token', meta: 'Network, verification, holders', status: 'doing' },
+      { id: 'liquidity', title: 'Liquidity + listing', meta: 'DEX pool, pricing, LP strategy', status: 'todo' },
+      { id: 'trading-mvp', title: 'Trading platform MVP', meta: 'Core trade flows, charts, orders', status: 'doing' },
+      { id: 'security', title: 'Security + monitoring', meta: 'Audit, rate limits, alerts', status: 'todo' },
+      { id: 'mobile', title: 'Mobile app (iOS/Android)', meta: 'Portfolio, trades, notifications', status: 'todo' },
+      { id: 'desktop', title: 'Desktop app', meta: 'Power tools, faster trading UX', status: 'todo' }
+    ];
+
+    function safeParseJson(value) {
+      try { return JSON.parse(value); } catch { return null; }
+    }
+
+    function loadRoadmapStatus() {
+      const parsed = safeParseJson(localStorage.getItem(ROADMAP_STORAGE_KEY));
+      if (!parsed || typeof parsed !== 'object') return;
+      roadmapSteps.forEach(step => {
+        const status = parsed[step.id];
+        if (status === 'todo' || status === 'doing' || status === 'done') step.status = status;
+      });
+    }
+
+    function saveRoadmapStatus() {
+      const next = {};
+      roadmapSteps.forEach(step => (next[step.id] = step.status));
+      localStorage.setItem(ROADMAP_STORAGE_KEY, JSON.stringify(next));
+    }
+
+    function nextStatus(current) {
+      if (current === 'todo') return 'doing';
+      if (current === 'doing') return 'done';
+      return 'todo';
+    }
+
+    function cycleRoadmapStep(stepId) {
+      const step = roadmapSteps.find(s => s.id === stepId);
+      if (!step) return;
+      step.status = nextStatus(step.status);
+      saveRoadmapStatus();
+      renderRoadmap();
+    }
+
+    function elNS(tag) {
+      return document.createElementNS('http://www.w3.org/2000/svg', tag);
+    }
+
+    function setAttrs(node, attrs) {
+      Object.entries(attrs).forEach(([k, v]) => node.setAttribute(k, String(v)));
+      return node;
+    }
+
+    function svgText(x, y, text, cls, anchor) {
+      const t = elNS('text');
+      setAttrs(t, { x, y });
+      if (cls) t.setAttribute('class', cls);
+      if (anchor) t.setAttribute('text-anchor', anchor);
+      t.textContent = text;
+      return t;
+    }
+
+    function drawGrid(svg, cx, cy, radii, spokes) {
+      radii.forEach(r => {
+        const c = elNS('circle');
+        c.setAttribute('class', 'rm-grid');
+        setAttrs(c, { cx, cy, r });
+        svg.appendChild(c);
+      });
+
+      for (let i = 0; i < spokes; i++) {
+        const angle = (Math.PI * 2 * i) / spokes - Math.PI / 2;
+        const x = cx + Math.cos(angle) * radii[radii.length - 1];
+        const y = cy + Math.sin(angle) * radii[radii.length - 1];
+        const line = elNS('line');
+        line.setAttribute('class', 'rm-spoke');
+        setAttrs(line, { x1: cx, y1: cy, x2: x, y2: y });
+        svg.appendChild(line);
+      }
+    }
+
+    function renderRoadmapSvg() {
+      if (!roadmapSvg) return;
+      while (roadmapSvg.firstChild) roadmapSvg.removeChild(roadmapSvg.firstChild);
+
+      const vb = roadmapSvg.viewBox.baseVal;
+      const cx = vb.width / 2;
+      const cy = vb.height / 2;
+      const rings = [70, 140, 210, 240];
+
+      drawGrid(roadmapSvg, cx, cy, rings, roadmapSteps.length);
+
+      const goal = elNS('g');
+      goal.setAttribute('class', 'rm-goal');
+      const goalCircle = elNS('circle');
+      setAttrs(goalCircle, {
+        cx,
+        cy,
+        r: 36,
+        fill: 'rgba(59, 130, 246, 0.20)',
+        stroke: 'rgba(59, 130, 246, 0.75)',
+        'stroke-width': 2
+      });
+      goal.appendChild(goalCircle);
+      goal.appendChild(svgText(cx, cy - 4, 'MAIN GOAL', null, 'middle'));
+      goal.appendChild(svgText(cx, cy + 16, 'Token + Trading Platform', 'meta', 'middle'));
+      roadmapSvg.appendChild(goal);
+
+      const outer = 240;
+      const stepRadius = 16;
+
+      roadmapSteps.forEach((step, idx) => {
+        const angle = (Math.PI * 2 * idx) / roadmapSteps.length - Math.PI / 2;
+        const x = cx + Math.cos(angle) * outer;
+        const y = cy + Math.sin(angle) * outer;
+
+        const g = elNS('g');
+        g.setAttribute('class', `rm-node ${step.status}`);
+        g.setAttribute('data-step', step.id);
+
+        const pulse = elNS('circle');
+        pulse.setAttribute('class', 'pulse');
+        setAttrs(pulse, { cx: x, cy: y, r: stepRadius + 3 });
+        g.appendChild(pulse);
+
+        const base = elNS('circle');
+        base.setAttribute('class', 'base');
+        setAttrs(base, { cx: x, cy: y, r: stepRadius });
+        g.appendChild(base);
+
+        const check = elNS('path');
+        check.setAttribute('class', 'rm-check');
+        check.setAttribute('d', `M ${x - 7} ${y + 1} L ${x - 1} ${y + 7} L ${x + 9} ${y - 5}`);
+        g.appendChild(check);
+
+        const anchorLeft = Math.cos(angle) >= 0;
+        const tx = x + (anchorLeft ? 22 : -22);
+        const ty = y - 6;
+        g.appendChild(svgText(tx, ty, step.title, null, anchorLeft ? 'start' : 'end'));
+        g.appendChild(svgText(tx, ty + 16, step.meta, 'meta', anchorLeft ? 'start' : 'end'));
+
+        g.addEventListener('click', () => cycleRoadmapStep(step.id));
+        roadmapSvg.appendChild(g);
+      });
+    }
+
+    function renderRoadmapList() {
+      if (!roadmapList) return;
+      roadmapList.innerHTML = '';
+
+      roadmapSteps.forEach(step => {
+        const item = document.createElement('div');
+        item.className = `roadmap-item ${step.status}`;
+        item.setAttribute('role', 'button');
+        item.setAttribute('tabindex', '0');
+
+        const left = document.createElement('div');
+        const title = document.createElement('div');
+        title.className = 'roadmap-item-title';
+        title.textContent = step.title;
+        const meta = document.createElement('div');
+        meta.className = 'roadmap-item-meta';
+        meta.textContent = step.meta;
+        left.appendChild(title);
+        left.appendChild(meta);
+
+        const badge = document.createElement('span');
+        badge.className = `status-badge ${step.status === 'done' ? 'complete' : step.status === 'doing' ? 'in-progress' : ''}`;
+        badge.textContent = step.status === 'done' ? 'Complete' : step.status === 'doing' ? 'In progress' : 'To do';
+
+        const activate = () => cycleRoadmapStep(step.id);
+        item.addEventListener('click', activate);
+        item.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            activate();
+          }
+        });
+
+        item.appendChild(left);
+        item.appendChild(badge);
+        roadmapList.appendChild(item);
+      });
+    }
+
+    function renderRoadmap() {
+      renderRoadmapSvg();
+      renderRoadmapList();
+    }
+
+    if (roadmapSvg && roadmapList) {
+      loadRoadmapStatus();
+      renderRoadmap();
+
+      if (roadmapResetBtn) {
+        roadmapResetBtn.addEventListener('click', () => {
+          localStorage.removeItem(ROADMAP_STORAGE_KEY);
+          roadmapSteps.forEach(s => (s.status = 'todo'));
+          const mint = roadmapSteps.find(s => s.id === 'mint-deploy');
+          const mvp = roadmapSteps.find(s => s.id === 'trading-mvp');
+          if (mint) mint.status = 'doing';
+          if (mvp) mvp.status = 'doing';
+          saveRoadmapStatus();
+          renderRoadmap();
+        });
+      }
+    }
 
     document.querySelectorAll('[data-toggle]').forEach(btn => {
       btn.addEventListener('click', () => {
