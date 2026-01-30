@@ -646,6 +646,258 @@
 
     .modal-inner { padding: 2rem; }
 
+    .project-modal {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .project-subtitle {
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+    }
+
+    .project-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 1rem;
+    }
+
+    .project-panel {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .project-panel.center { text-align: center; }
+
+    .project-panel h3 {
+      margin-bottom: 0.6rem;
+    }
+
+    .project-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .project-kpis {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .kpi {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .project-input {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #0b1220;
+      color: var(--text);
+    }
+
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.6rem;
+      align-items: center;
+    }
+
+    .project-actions .project-input {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .project-btn {
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .project-btn.primary { background: var(--accent); color: #fff; }
+    .project-btn.success { background: var(--accent-2); color: #0b1220; }
+    .project-btn.danger { background: var(--danger); color: #fff; }
+    .project-btn.ghost { background: #0b1220; color: var(--text); border: 1px solid var(--border); }
+
+    .project-note { color: var(--text-muted); font-size: 0.9rem; }
+
+    .project-nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-tab {
+      background: #0b1220;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.7rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .project-tab.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .rank-item {
+      padding: 0.9rem 1rem;
+      border-radius: 10px;
+      cursor: move;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 600;
+    }
+
+    .rank-item.gold { background: #fbbf24; color: #111827; }
+    .rank-item.silver { background: #94a3b8; color: #0f172a; }
+    .rank-item.bronze { background: #f97316; color: #0b1220; }
+
+    .meme-canvas {
+      background: #0b1220;
+      padding: 1.5rem;
+      border-radius: 10px;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .meme-text {
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      font-weight: 800;
+      color: #fff;
+      text-shadow: 2px 2px 0 #000;
+    }
+
+    .project-canvas {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      border: 3px solid #000;
+    }
+
+    .project-stack {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 0.6rem;
+    }
+
+    .notes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .note-card {
+      padding: 0.75rem;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .note-delete {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    .secret-meta {
+      color: #6b7280;
+      font-size: 0.8rem;
+    }
+
+    .tindog-card {
+      background: #0b1220;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      margin-bottom: 0.8rem;
+    }
+
+    .match-status { min-height: 24px; }
+
+    .stack-item {
+      background: #0b1220;
+      padding: 0.75rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .project-card-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .cert-downloads {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    .cert-downloads .btn { text-align: center; }
+
+    .rank-placeholder {
+      border: 2px dashed rgba(148, 163, 184, 0.5);
+      border-radius: 10px;
+      height: 48px;
+    }
+
+    .rank-item.dragging {
+      opacity: 0.6;
+    }
+
+    .rank-item { touch-action: none; }
+
+    #projects .card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    #projects .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.25);
+    }
+
+    #projects .card p {
+      color: var(--text-muted);
+    }
+
 
     @media (max-width: 720px) {
       .hero-text h1 { font-size: 2.2rem; }
@@ -653,6 +905,8 @@
       .hero-actions { flex-direction: column; align-items: stretch; }
       .company-logos { justify-content: center; }
       .section-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .project-layout { grid-template-columns: 1fr; }
+      .modal-content { max-height: 94vh; }
     }
 
     @media (max-width: 520px) {
@@ -663,6 +917,9 @@
       .pdf-select { width: 100%; min-width: unset; }
       .btn.small { width: 100%; text-align: center; }
       .company-logo { height: 52px; }
+      .modal-inner { padding: 1.25rem; }
+      .project-actions { flex-direction: column; }
+      .project-btn { width: 100%; }
     }
 
     @media (max-width: 380px) {
@@ -826,53 +1083,185 @@
     <section id="projects" class="section active">
       <div class="section-header"><h2>Projects</h2></div>
       <div class="grid">
-        <div class="card">
-          <div class="card-header"><strong>Portfolio Demo</strong><button class="btn-arrow" data-project="portfolio">→</button></div>
-          <p>Interactive navigation demo.</p>
+        <div class="card project-card">
+          <div class="card-header">
+            <strong>Portfolio Demo</strong>
+            <div class="project-card-actions">
+              <span class="status-badge complete">Complete</span>
+              <button class="btn-arrow" data-project="portfolio">→</button>
+            </div>
+          </div>
+          <p>Interactive navigation and smooth state transitions.</p>
+          <div class="tags">
+            <span class="tag">SPA</span>
+            <span class="tag">State</span>
+            <span class="tag">UX</span>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-header"><strong>Movie Ranker</strong><button class="btn-arrow" data-project="ranking">→</button></div>
-          <p>Drag-and-drop reordering.</p>
+        <div class="card project-card">
+          <div class="card-header">
+            <strong>Movie Ranker</strong>
+            <div class="project-card-actions">
+              <span class="status-badge complete">Complete</span>
+              <button class="btn-arrow" data-project="ranking">→</button>
+            </div>
+          </div>
+          <p>Drag-and-drop ranking with instant feedback.</p>
+          <div class="tags">
+            <span class="tag">Drag & Drop</span>
+            <span class="tag">DOM</span>
+            <span class="tag">UI</span>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-header"><strong>Meme Generator</strong><button class="btn-arrow" data-project="meme">→</button></div>
-          <p>Live text updates.</p>
+        <div class="card project-card">
+          <div class="card-header">
+            <strong>Meme Generator</strong>
+            <div class="project-card-actions">
+              <span class="status-badge complete">Complete</span>
+              <button class="btn-arrow" data-project="meme">→</button>
+            </div>
+          </div>
+          <p>Live text updates with quick presets.</p>
+          <div class="tags">
+            <span class="tag">Typography</span>
+            <span class="tag">Inputs</span>
+            <span class="tag">Fun</span>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-header"><strong>Mondrian Art</strong><button class="btn-arrow" data-project="mondrian">→</button></div>
-          <p>Canvas art generator.</p>
+        <div class="card project-card">
+          <div class="card-header">
+            <strong>Mondrian Art</strong>
+            <div class="project-card-actions">
+              <span class="status-badge complete">Complete</span>
+              <button class="btn-arrow" data-project="mondrian">→</button>
+            </div>
+          </div>
+          <p>Canvas-based generative art with score.</p>
+          <div class="tags">
+            <span class="tag">Canvas</span>
+            <span class="tag">Generative</span>
+            <span class="tag">UX</span>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-header"><strong>TinDog</strong><button class="btn-arrow" data-project="tindog">→</button></div>
-          <p>Interactive matchmaker UI.</p>
+        <div class="card project-card">
+          <div class="card-header">
+            <strong>TinDog</strong>
+            <div class="project-card-actions">
+              <span class="status-badge complete">Complete</span>
+              <button class="btn-arrow" data-project="tindog">→</button>
+            </div>
+          </div>
+          <p>Interactive matchmaker with quick actions.</p>
+          <div class="tags">
+            <span class="tag">UI Flow</span>
+            <span class="tag">State</span>
+            <span class="tag">Fun</span>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-header"><strong>Keeper Notes</strong><button class="btn-arrow" data-project="keeper">→</button></div>
-          <p>Dynamic notes manager.</p>
+        <div class="card project-card">
+          <div class="card-header">
+            <strong>Keeper Notes</strong>
+            <div class="project-card-actions">
+              <span class="status-badge complete">Complete</span>
+              <button class="btn-arrow" data-project="keeper">→</button>
+            </div>
+          </div>
+          <p>Dynamic notes with color-coded cards.</p>
+          <div class="tags">
+            <span class="tag">CRUD</span>
+            <span class="tag">Grid</span>
+            <span class="tag">UI</span>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-header"><strong>Secrets Wall</strong><button class="btn-arrow" data-project="secrets">→</button></div>
-          <p>Live list updates.</p>
+        <div class="card project-card">
+          <div class="card-header">
+            <strong>Secrets Wall</strong>
+            <div class="project-card-actions">
+              <span class="status-badge complete">Complete</span>
+              <button class="btn-arrow" data-project="secrets">→</button>
+            </div>
+          </div>
+          <p>Live list updates with a social feel.</p>
+          <div class="tags">
+            <span class="tag">Live Feed</span>
+            <span class="tag">Form</span>
+            <span class="tag">UX</span>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-header"><strong>GSD Event</strong><button class="btn-arrow" data-project="gsd">→</button></div>
-          <p>Production overview.</p>
+        <div class="card project-card">
+          <div class="card-header">
+            <strong>GSD Event</strong>
+            <div class="project-card-actions">
+              <span class="status-badge complete">Complete</span>
+              <button class="btn-arrow" data-project="gsd">→</button>
+            </div>
+          </div>
+          <p>National event production showcase.</p>
+          <div class="tags">
+            <span class="tag">Production</span>
+            <span class="tag">Audio</span>
+            <span class="tag">Delivery</span>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-header"><strong>Media Production</strong><button class="btn-arrow" data-project="media">→</button></div>
-          <p>On-site services list.</p>
+        <div class="card project-card">
+          <div class="card-header">
+            <strong>Media Production</strong>
+            <div class="project-card-actions">
+              <span class="status-badge complete">Complete</span>
+              <button class="btn-arrow" data-project="media">→</button>
+            </div>
+          </div>
+          <p>On-site services and broadcast workflow.</p>
+          <div class="tags">
+            <span class="tag">Video</span>
+            <span class="tag">Live</span>
+            <span class="tag">Post</span>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-header"><strong>Property Portfolio</strong><button class="btn-arrow" data-project="property">→</button></div>
-          <p>Management overview.</p>
+        <div class="card project-card">
+          <div class="card-header">
+            <strong>Property Portfolio</strong>
+            <div class="project-card-actions">
+              <span class="status-badge complete">Complete</span>
+              <button class="btn-arrow" data-project="property">→</button>
+            </div>
+          </div>
+          <p>Rental portfolio oversight and reporting.</p>
+          <div class="tags">
+            <span class="tag">Operations</span>
+            <span class="tag">Finance</span>
+            <span class="tag">Clients</span>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-header"><strong>Trading Analytics</strong><button class="btn-arrow" data-project="trading">→</button></div>
-          <p>Roadmap features.</p>
+        <div class="card project-card">
+          <div class="card-header">
+            <strong>Trading Analytics</strong>
+            <div class="project-card-actions">
+              <span class="status-badge in-progress">In progress</span>
+              <button class="btn-arrow" data-project="trading">→</button>
+            </div>
+          </div>
+          <p>Roadmap to a full trading insights suite.</p>
+          <div class="tags">
+            <span class="tag">FinTech</span>
+            <span class="tag">AI</span>
+            <span class="tag">Analytics</span>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-header"><strong>Crypto Token</strong><button class="btn-arrow" data-project="crypto">→</button></div>
-          <p>Token concept.</p>
+        <div class="card project-card">
+          <div class="card-header">
+            <strong>Crypto Token</strong>
+            <div class="project-card-actions">
+              <span class="status-badge in-progress">In progress</span>
+              <button class="btn-arrow" data-project="crypto">→</button>
+            </div>
+          </div>
+          <p>Token concept for an IC-based ecosystem.</p>
+          <div class="tags">
+            <span class="tag">Motoko</span>
+            <span class="tag">Tokenomics</span>
+            <span class="tag">Blockchain</span>
+          </div>
         </div>
       </div>
     </section>
@@ -919,6 +1308,12 @@
           <div class="card-header"><strong>NQF 4 — FSA 3</strong><button class="btn" data-cert="cert3">View</button></div>
           <p>Score: 84%</p>
         </div>
+      </div>
+      <p class="project-note">Download certificates directly:</p>
+      <div class="cert-downloads">
+        <a class="btn ghost" href="Completion%20Full-Stack%20Web%20Developer%20Certificate.pdf" download>Download Full-Stack Certificate</a>
+        <a class="btn ghost" href="Matric%20Certificate%20-%20Kyle.pdf" download>Download Matric Certificate</a>
+        <a class="btn primary" href="SSETA%20-%20FETC%20Real%20estate%20Level%2004%20%28Certificate%20of%20competence%29.pdf" download>Download SSETA Certificate</a>
       </div>
     </section>
 
@@ -1169,141 +1564,394 @@
 
     const projects = {
       portfolio: `
-        <h2>Portfolio Demo - Interactive Navigation</h2>
-        <div style="background: #1f2937; padding: 20px; border-radius: 10px; color: #e5e7eb;">
-          <div style="display: flex; gap: 15px; margin-bottom: 20px; border-bottom: 2px solid #3b82f6; padding-bottom: 15px; flex-wrap: wrap;" id="navButtons">
-            <button class="nav-btn" data-page="home" onclick="switchPage(event)" style="background: #3b82f6; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 5px;">🏠 Home</button>
-            <button class="nav-btn" data-page="about" onclick="switchPage(event)" style="background: #0b1220; color: #e5e7eb; border: none; padding: 10px 15px; cursor: pointer; border-radius: 5px;">👤 About</button>
-            <button class="nav-btn" data-page="projects" onclick="switchPage(event)" style="background: #0b1220; color: #e5e7eb; border: none; padding: 10px 15px; cursor: pointer; border-radius: 5px;">💼 Projects</button>
-            <button class="nav-btn" data-page="contact" onclick="switchPage(event)" style="background: #0b1220; color: #e5e7eb; border: none; padding: 10px 15px; cursor: pointer; border-radius: 5px;">✉️ Contact</button>
-          </div>
-          <div id="pageContent" style="min-height: 150px; padding: 15px; background: #0b1220; border-radius: 8px;">
-            <h3>Welcome to My Portfolio</h3>
-            <p>Click the navigation buttons above to explore sections.</p>
-            <p style="margin-top: 10px; color: #22c55e;">✓ Demonstrates: state management and transitions</p>
-          </div>
-        </div>
-      `,
-      ranking: `
-        <h2>🎬 Interactive Movie Ranker</h2>
-        <div style="background: #1f2937; padding: 20px; border-radius: 10px; color: #e5e7eb;">
-          <p style="margin-bottom: 15px; color: #94a3b8;">📊 Drag to reorder</p>
-          <div id="rankingList" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
-            <div draggable="true" class="rank-item" style="background: #1e40af; padding: 15px; border-radius: 8px; cursor: move;">🥇 Inception</div>
-            <div draggable="true" class="rank-item" style="background: #2563eb; padding: 15px; border-radius: 8px; cursor: move;">🥈 The Shawshank</div>
-            <div draggable="true" class="rank-item" style="background: #22c55e; padding: 15px; border-radius: 8px; cursor: move; color:#0b1220;">🥉 Matrix</div>
-          </div>
-          <p style="color: #94a3b8;">💡 Drag & drop API demo</p>
-        </div>
-      `,
-      meme: `
-        <h2>🎨 AI Meme Generator</h2>
-        <div style="background: #1f2937; padding: 20px; border-radius: 10px; color: #e5e7eb; text-align: center;">
-          <div id="memeCanvas" style="background: #0b1220; padding: 30px; border-radius: 8px; margin-bottom: 15px; height: 220px; display: flex; align-items: center; justify-content: center;">
+        <article class="project-modal">
+          <div class="project-header">
             <div>
-              <div id="topText" style="font-size: 24px; font-weight: bold; color: white; text-shadow: 3px 3px 0px black; margin-bottom: 60px;">WHEN YOU FINISH</div>
-              <div id="bottomText" style="font-size: 24px; font-weight: bold; color: white; text-shadow: 3px 3px 0px black;">A PROJECT IN PRODUCTION</div>
+              <h2>Portfolio Demo</h2>
+              <p class="project-subtitle">Single-page navigation with smooth state transitions.</p>
+            </div>
+            <span class="status-badge complete">Complete</span>
+          </div>
+          <div class="project-layout">
+            <div class="project-panel">
+              <div id="navButtons" class="project-nav">
+                <button class="project-tab active" data-page="home" onclick="switchPage(event)">🏠 Home</button>
+                <button class="project-tab" data-page="about" onclick="switchPage(event)">👤 About</button>
+                <button class="project-tab" data-page="projects" onclick="switchPage(event)">💼 Projects</button>
+                <button class="project-tab" data-page="contact" onclick="switchPage(event)">✉️ Contact</button>
+              </div>
+              <div id="pageContent" class="stack-item">
+                <h3>Welcome to My Portfolio</h3>
+                <p>Click the navigation buttons above to explore sections.</p>
+                <p class="project-note">✓ Demonstrates: state management and transitions</p>
+              </div>
+            </div>
+            <div class="project-panel">
+              <h3>Highlights</h3>
+              <ul class="project-list">
+                <li>✓ SPA-style content switching</li>
+                <li>✓ Visual active-state feedback</li>
+                <li>✓ Clean, reusable component layout</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">Navigation</span>
+                <span class="tag">State</span>
+                <span class="tag">Transitions</span>
+              </div>
             </div>
           </div>
-          <input type="text" id="topMemeText" value="WHEN YOU FINISH" style="width: 100%; padding: 8px; margin-bottom: 8px;" />
-          <input type="text" id="bottomMemeText" value="A PROJECT IN PRODUCTION" style="width: 100%; padding: 8px; margin-bottom: 12px;" />
-          <button onclick="updateMeme()" style="background:#3b82f6;color:#fff;border:none;padding:8px 16px;border-radius:6px;">Update</button>
-          <button onclick="randomMeme()" style="background:#22c55e;color:#fff;border:none;padding:8px 16px;border-radius:6px;margin-left:6px;">Random</button>
-        </div>
+        </article>
+      `,
+      ranking: `
+        <article class="project-modal">
+          <div class="project-header">
+            <div>
+              <h2>Interactive Movie Ranker</h2>
+              <p class="project-subtitle">Drag-and-drop ordering with instant feedback.</p>
+            </div>
+            <span class="status-badge complete">Complete</span>
+          </div>
+          <div class="project-layout">
+            <div class="project-panel">
+              <p class="project-note">📊 Drag to reorder</p>
+              <div id="rankingList" class="project-stack">
+                <div draggable="true" class="rank-item gold">🥇 Inception</div>
+                <div draggable="true" class="rank-item silver">🥈 The Shawshank</div>
+                <div draggable="true" class="rank-item bronze">🥉 Matrix</div>
+              </div>
+              <p class="project-note">💡 Drag & drop API demo</p>
+            </div>
+            <div class="project-panel">
+              <h3>What it shows</h3>
+              <ul class="project-list">
+                <li>✓ Native drag & drop handling</li>
+                <li>✓ Reordering logic</li>
+                <li>✓ Clear visual hierarchy</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">Drag & Drop</span>
+                <span class="tag">DOM</span>
+                <span class="tag">UX</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      `,
+      meme: `
+        <article class="project-modal">
+          <div class="project-header">
+            <div>
+              <h2>AI Meme Generator</h2>
+              <p class="project-subtitle">Live text updates with presets.</p>
+            </div>
+            <span class="status-badge complete">Complete</span>
+          </div>
+          <div class="project-layout">
+            <div class="project-panel center">
+              <div id="memeCanvas" class="meme-canvas">
+                <div>
+                  <div id="topText" class="meme-text" style="margin-bottom: 60px;">WHEN YOU FINISH</div>
+                  <div id="bottomText" class="meme-text">A PROJECT IN PRODUCTION</div>
+                </div>
+              </div>
+              <input type="text" id="topMemeText" value="WHEN YOU FINISH" class="project-input" />
+              <input type="text" id="bottomMemeText" value="A PROJECT IN PRODUCTION" class="project-input" style="margin-top: 0.5rem;" />
+              <div class="project-actions">
+                <button onclick="updateMeme()" class="project-btn primary">Update</button>
+                <button onclick="randomMeme()" class="project-btn success">Random</button>
+              </div>
+            </div>
+            <div class="project-panel">
+              <h3>Highlights</h3>
+              <ul class="project-list">
+                <li>✓ Immediate text rendering</li>
+                <li>✓ Preset generator for quick ideas</li>
+                <li>✓ Clean typography and layout</li>
+              </ul>
+            </div>
+          </div>
+        </article>
       `,
       mondrian: `
-        <h2>🎨 Mondrian Art Generator</h2>
-        <div style="background: #1f2937; padding: 20px; border-radius: 10px;">
-          <canvas id="mondrian" width="400" height="400" style="background: white; border-radius: 8px; display: block; margin: 0 auto; border: 3px solid #000;"></canvas>
-          <div style="display:flex; gap:10px; margin-top:12px;">
-            <button onclick="generateMondrian()" style="flex:1;background:#3b82f6;color:#fff;border:none;padding:10px;border-radius:6px;">Generate</button>
-            <button onclick="clearCanvas()" style="flex:1;background:#ef4444;color:#fff;border:none;padding:10px;border-radius:6px;">Clear</button>
+        <article class="project-modal">
+          <div class="project-header">
+            <div>
+              <h2>Mondrian Art Generator</h2>
+              <p class="project-subtitle">Generative canvas art with a scoring mechanic.</p>
+            </div>
+            <span class="status-badge complete">Complete</span>
           </div>
-          <p style="margin-top:10px; color:#94a3b8; text-align:center;">Score: <span id="score" style="color:#22c55e;">0</span>/100</p>
-        </div>
+          <div class="project-layout">
+            <div class="project-panel center">
+              <canvas id="mondrian" width="400" height="400" class="project-canvas"></canvas>
+              <div class="project-actions">
+                <button onclick="generateMondrian()" class="project-btn primary">Generate</button>
+                <button onclick="clearCanvas()" class="project-btn danger">Clear</button>
+              </div>
+              <p class="project-note">Score: <span id="score" style="color: var(--accent-2);">0</span>/100</p>
+            </div>
+            <div class="project-panel">
+              <h3>What it shows</h3>
+              <ul class="project-list">
+                <li>✓ Canvas drawing workflow</li>
+                <li>✓ Randomized layouts</li>
+                <li>✓ Simple gamification</li>
+              </ul>
+            </div>
+          </div>
+        </article>
       `,
       tindog: `
-        <h2>🐕 TinDog Matchmaker</h2>
-        <div style="background:#1f2937;padding:20px;border-radius:10px;color:#e5e7eb;text-align:center;">
-          <div style="background:#0b1220;padding:16px;border-radius:10px;margin-bottom:12px;">
-            <h3 id="dogName">🐕 Max, 2</h3>
-            <p id="dogBio" style="color:#94a3b8;">Friendly Golden Retriever, loves hiking and cuddles</p>
+        <article class="project-modal">
+          <div class="project-header">
+            <div>
+              <h2>TinDog Matchmaker</h2>
+              <p class="project-subtitle">Swipe-style decisions with quick feedback.</p>
+            </div>
+            <span class="status-badge complete">Complete</span>
           </div>
-          <div style="display:flex; justify-content:center; gap:10px;">
-            <button onclick="nextDog('pass')" style="background:#ef4444;color:#fff;border:none;padding:8px 16px;border-radius:6px;">Pass</button>
-            <button onclick="nextDog('like')" style="background:#22c55e;color:#fff;border:none;padding:8px 16px;border-radius:6px;">Like</button>
+          <div class="project-layout">
+            <div class="project-panel center">
+              <div class="tindog-card">
+                <h3 id="dogName">🐕 Max, 2</h3>
+                <p id="dogBio" class="project-note">Friendly Golden Retriever, loves hiking and cuddles</p>
+              </div>
+              <div class="project-actions" style="justify-content: center;">
+                <button onclick="nextDog('pass')" class="project-btn danger">Pass</button>
+                <button onclick="nextDog('like')" class="project-btn success">Like</button>
+              </div>
+              <p id="matchStatus" class="match-status"></p>
+            </div>
+            <div class="project-panel">
+              <h3>Highlights</h3>
+              <ul class="project-list">
+                <li>✓ Quick user decision flow</li>
+                <li>✓ Dynamic content updates</li>
+                <li>✓ Friendly, playful UI</li>
+              </ul>
+            </div>
           </div>
-          <p id="matchStatus" style="margin-top:8px; min-height:24px;"></p>
-        </div>
+        </article>
       `,
       keeper: `
-        <h2>📝 Keeper Notes</h2>
-        <div style="background:#1f2937;padding:20px;border-radius:10px;color:#e5e7eb;">
-          <div id="notesGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:12px;"></div>
-          <div style="display:flex; gap:10px;">
-            <input id="newNoteInput" type="text" placeholder="Add a new note..." style="flex:1;padding:8px;" />
-            <button onclick="addNote()" style="background:#3b82f6;color:#fff;border:none;padding:8px 16px;border-radius:6px;">Add</button>
+        <article class="project-modal">
+          <div class="project-header">
+            <div>
+              <h2>Keeper Notes</h2>
+              <p class="project-subtitle">Color-coded notes with quick add/delete.</p>
+            </div>
+            <span class="status-badge complete">Complete</span>
           </div>
-        </div>
+          <div class="project-layout">
+            <div class="project-panel">
+              <div id="notesGrid" class="notes-grid" style="margin-bottom: 0.8rem;"></div>
+              <div class="project-actions">
+                <input id="newNoteInput" type="text" placeholder="Add a new note..." class="project-input" />
+                <button onclick="addNote()" class="project-btn primary">Add</button>
+              </div>
+            </div>
+            <div class="project-panel">
+              <h3>Highlights</h3>
+              <ul class="project-list">
+                <li>✓ Dynamic grid layout</li>
+                <li>✓ CRUD-style interactions</li>
+                <li>✓ Color-coded priority</li>
+              </ul>
+            </div>
+          </div>
+        </article>
       `,
       secrets: `
-        <h2>🤫 Secrets Wall</h2>
-        <div style="background:#1f2937;padding:20px;border-radius:10px;color:#e5e7eb;">
-          <div id="secretsList" style="display:flex;flex-direction:column;gap:10px;margin-bottom:12px;"></div>
-          <div style="display:flex; gap:10px;">
-            <input id="secretInput" type="text" placeholder="Share a secret..." style="flex:1;padding:8px;" />
-            <button onclick="submitSecret()" style="background:#22c55e;color:#fff;border:none;padding:8px 16px;border-radius:6px;">Share</button>
+        <article class="project-modal">
+          <div class="project-header">
+            <div>
+              <h2>Secrets Wall</h2>
+              <p class="project-subtitle">Real-time feed with social-style entries.</p>
+            </div>
+            <span class="status-badge complete">Complete</span>
           </div>
-        </div>
+          <div class="project-layout">
+            <div class="project-panel">
+              <div id="secretsList" class="project-stack" style="margin-bottom: 0.8rem;"></div>
+              <div class="project-actions">
+                <input id="secretInput" type="text" placeholder="Share a secret..." class="project-input" />
+                <button onclick="submitSecret()" class="project-btn success">Share</button>
+              </div>
+            </div>
+            <div class="project-panel">
+              <h3>Highlights</h3>
+              <ul class="project-list">
+                <li>✓ Live list rendering</li>
+                <li>✓ Friendly social layout</li>
+                <li>✓ Simple content moderation flow</li>
+              </ul>
+            </div>
+          </div>
+        </article>
       `,
       gsd: `
-        <h2>GSD 2025 Event</h2>
-        <div style="background:#1f2937;padding:20px;border-radius:10px;color:#e5e7eb;">
-          <h3 style="color:#fbbf24;">3-Day National German Shepherd Breed Showcase</h3>
-          <p><strong>Status:</strong> <span style="color:#22c55e;">✓ Complete</span></p>
-          <p><strong>Role:</strong> Production Lead & Audio Engineering</p>
-        </div>
+        <article class="project-modal">
+          <div class="project-header">
+            <div>
+              <h2>GSD 2025 Event</h2>
+              <p class="project-subtitle">3-day national German Shepherd showcase.</p>
+            </div>
+            <span class="status-badge complete">Complete</span>
+          </div>
+          <div class="project-layout">
+            <div class="project-panel">
+              <h3 style="color: #fbbf24;">Production Summary</h3>
+              <ul class="project-list">
+                <li>✓ Production lead & audio engineering</li>
+                <li>✓ Multi-day show scheduling</li>
+                <li>✓ On-site team coordination</li>
+              </ul>
+            </div>
+            <div class="project-panel">
+              <div class="project-kpis">
+                <div class="kpi">
+                  <div style="font-size: 1.1rem; font-weight: 800;">3 Days</div>
+                  <div class="project-note">National event</div>
+                </div>
+                <div class="kpi">
+                  <div style="font-size: 1.1rem; font-weight: 800;">Audio + Stage</div>
+                  <div class="project-note">Full production</div>
+                </div>
+                <div class="kpi">
+                  <div style="font-size: 1.1rem; font-weight: 800;">Complete</div>
+                  <div class="project-note">Delivered</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
       `,
       media: `
-        <h2>Media Production</h2>
-        <div style="background:#1f2937;padding:20px;border-radius:10px;color:#e5e7eb;">
-          <ul style="list-style:none;padding:0;">
-            <li>🎥 Professional video production</li>
-            <li>🎙️ Live audio mixing</li>
-            <li>📡 Live streaming</li>
-            <li>📸 Photography & post-production</li>
-          </ul>
-        </div>
+        <article class="project-modal">
+          <div class="project-header">
+            <div>
+              <h2>Media Production</h2>
+              <p class="project-subtitle">On-site capture, live mixing, and post.</p>
+            </div>
+            <span class="status-badge complete">Complete</span>
+          </div>
+          <div class="project-layout">
+            <div class="project-panel">
+              <h3>Services</h3>
+              <ul class="project-list">
+                <li>🎥 Professional video production</li>
+                <li>🎙️ Live audio mixing</li>
+                <li>📡 Live streaming</li>
+                <li>📸 Photography & post-production</li>
+              </ul>
+            </div>
+            <div class="project-panel">
+              <h3>Workflow</h3>
+              <ul class="project-list">
+                <li>✓ Pre-production planning</li>
+                <li>✓ On-site delivery</li>
+                <li>✓ Post-production edits</li>
+              </ul>
+            </div>
+          </div>
+        </article>
       `,
       property: `
-        <h2>Property Portfolio</h2>
-        <div style="background:#1f2937;padding:20px;border-radius:10px;color:#e5e7eb;">
-          <div style="background:#0b1220;padding:12px;border-radius:8px;margin-bottom:10px;">12 rental properties managed</div>
-          <ul style="list-style:none;padding:0;">
-            <li>✓ Tenant acquisition</li>
-            <li>✓ Lease management</li>
-            <li>✓ Maintenance coordination</li>
-            <li>✓ Financial reporting</li>
-          </ul>
-        </div>
+        <article class="project-modal">
+          <div class="project-header">
+            <div>
+              <h2>Property Portfolio</h2>
+              <p class="project-subtitle">End-to-end rental management operations.</p>
+            </div>
+            <span class="status-badge complete">Complete</span>
+          </div>
+          <div class="project-layout">
+            <div class="project-panel">
+              <div class="project-kpis">
+                <div class="kpi">
+                  <div style="font-size: 1.1rem; font-weight: 800;">12+</div>
+                  <div class="project-note">Rental units</div>
+                </div>
+                <div class="kpi">
+                  <div style="font-size: 1.1rem; font-weight: 800;">Full-service</div>
+                  <div class="project-note">Operations</div>
+                </div>
+                <div class="kpi">
+                  <div style="font-size: 1.1rem; font-weight: 800;">Reporting</div>
+                  <div class="project-note">Monthly statements</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-panel">
+              <h3>Responsibilities</h3>
+              <ul class="project-list">
+                <li>✓ Tenant acquisition & onboarding</li>
+                <li>✓ Lease management</li>
+                <li>✓ Maintenance coordination</li>
+                <li>✓ Financial reporting</li>
+              </ul>
+            </div>
+          </div>
+        </article>
       `,
       trading: `
-        <h2>Trading Analytics Platform</h2>
-        <div style="background:#1f2937;padding:20px;border-radius:10px;color:#e5e7eb;">
-          <p>Status: In Development</p>
-          <ul style="list-style:none;padding:0;">
-            <li>📊 Real-time market data</li>
-            <li>💹 Portfolio tracking</li>
-            <li>🤖 AI trade suggestions</li>
-          </ul>
-        </div>
+        <article class="project-modal">
+          <div class="project-header">
+            <div>
+              <h2>Trading Analytics Platform</h2>
+              <p class="project-subtitle">Building a full-featured market insights suite.</p>
+            </div>
+            <span class="status-badge in-progress">In progress</span>
+          </div>
+          <div class="project-layout">
+            <div class="project-panel">
+              <h3>Planned features</h3>
+              <ul class="project-list">
+                <li>📊 Real-time market data</li>
+                <li>💹 Portfolio tracking</li>
+                <li>🤖 AI trade suggestions</li>
+                <li>🧪 Strategy backtesting</li>
+              </ul>
+            </div>
+            <div class="project-panel">
+              <h3>Focus</h3>
+              <ul class="project-list">
+                <li>✓ Multi-device experience</li>
+                <li>✓ Transparent performance metrics</li>
+                <li>✓ Secure data handling</li>
+              </ul>
+            </div>
+          </div>
+        </article>
       `,
       crypto: `
-        <h2>Cryptocurrency Token</h2>
-        <div style="background:#1f2937;padding:20px;border-radius:10px;color:#e5e7eb;">
-          <p>Status: In Development</p>
-          <p>Technology: Motoko on Internet Computer</p>
-        </div>
+        <article class="project-modal">
+          <div class="project-header">
+            <div>
+              <h2>Cryptocurrency Token</h2>
+              <p class="project-subtitle">Token concept for an IC-based ecosystem.</p>
+            </div>
+            <span class="status-badge in-progress">In progress</span>
+          </div>
+          <div class="project-layout">
+            <div class="project-panel">
+              <h3>Plan</h3>
+              <ul class="project-list">
+                <li>✓ Motoko smart contract foundation</li>
+                <li>✓ Tokenomics + emission schedule</li>
+                <li>✓ Governance utility</li>
+              </ul>
+            </div>
+            <div class="project-panel">
+              <h3>Next steps</h3>
+              <ul class="project-list">
+                <li>✓ MVP token deploy</li>
+                <li>✓ Wallet integrations</li>
+                <li>✓ Launch strategy</li>
+              </ul>
+            </div>
+          </div>
+        </article>
       `
     };
 
@@ -1321,17 +1969,18 @@
             contact: '<h3>✉️ Contact</h3><p>+27 769 526 266</p><p>kdbburns.za@gmail.com</p>'
           };
           pageContent.innerHTML = pages[page] || '';
-          scope.querySelectorAll('.nav-btn').forEach(btn => {
-            btn.style.background = btn.dataset.page === page ? '#3b82f6' : '#0b1220';
-            btn.style.color = btn.dataset.page === page ? '#fff' : '#e5e7eb';
+          scope.querySelectorAll('.project-tab').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.page === page);
           });
         };
-        const homeBtn = scope.querySelector('.nav-btn[data-page="home"]');
+        const homeBtn = scope.querySelector('.project-tab[data-page="home"]');
         if (homeBtn) window.switchPage({ target: homeBtn });
       },
       ranking: () => {
         const scope = modalInner;
         let dragged = null;
+        let activeItem = null;
+        let placeholder = null;
         scope.querySelectorAll('.rank-item').forEach(item => {
           item.addEventListener('dragstart', (e) => {
             dragged = e.currentTarget;
@@ -1348,6 +1997,55 @@
             dragged.innerHTML = temp;
           });
         });
+
+        const list = scope.querySelector('#rankingList');
+        if (!list) return;
+
+        const ensurePlaceholder = () => {
+          if (!placeholder) {
+            placeholder = document.createElement('div');
+            placeholder.className = 'rank-placeholder';
+          }
+          return placeholder;
+        };
+
+        const onPointerDown = (e) => {
+          const target = e.target.closest('.rank-item');
+          if (!target) return;
+          activeItem = target;
+          activeItem.classList.add('dragging');
+          const ph = ensurePlaceholder();
+          ph.style.height = `${activeItem.offsetHeight}px`;
+          activeItem.after(ph);
+          try { activeItem.setPointerCapture(e.pointerId); } catch { }
+        };
+
+        const onPointerMove = (e) => {
+          if (!activeItem) return;
+          e.preventDefault();
+          const elem = document.elementFromPoint(e.clientX, e.clientY);
+          const overItem = elem?.closest('.rank-item');
+          if (!overItem || overItem === activeItem) return;
+          const rect = overItem.getBoundingClientRect();
+          const shouldInsertAfter = e.clientY > rect.top + rect.height / 2;
+          if (shouldInsertAfter) {
+            overItem.after(placeholder);
+          } else {
+            overItem.before(placeholder);
+          }
+        };
+
+        const onPointerUp = () => {
+          if (!activeItem || !placeholder) return;
+          placeholder.replaceWith(activeItem);
+          activeItem.classList.remove('dragging');
+          activeItem = null;
+        };
+
+        list.addEventListener('pointerdown', onPointerDown);
+        list.addEventListener('pointermove', onPointerMove, { passive: false });
+        list.addEventListener('pointerup', onPointerUp);
+        list.addEventListener('pointercancel', onPointerUp);
       },
       meme: () => {
         const scope = modalInner;
@@ -1451,9 +2149,9 @@
           if (!grid) return;
           grid.innerHTML = notes.map((note, index) => {
             const [title, desc, bg, color] = note.split('|');
-            return `<div data-note-index="${index}" style="background:${bg};color:${color};padding:12px;border-radius:8px;">
+            return `<div data-note-index="${index}" class="note-card" style="background:${bg};color:${color};">
+              <span onclick="deleteNote(event)" class="note-delete">×</span>
               <strong>${title}</strong><p style="margin:4px 0 0 0;">${desc}</p>
-              <span onclick="deleteNote(event)" style="float:right;cursor:pointer;opacity:0.6;">×</span>
             </div>`;
           }).join('');
         };
@@ -1487,9 +2185,9 @@
           const list = scope.querySelector('#secretsList');
           if (!list) return;
           list.innerHTML = secrets.map(secret => `
-            <div style="background:#0b1220;padding:12px;border-radius:8px;">
+            <div class="stack-item">
               <p style="margin:0;font-style:italic;">${secret.text}</p>
-              <small style="color:#6b7280;">${secret.time} • ${secret.likes} ❤️</small>
+              <small class="secret-meta">${secret.time} • ${secret.likes} ❤️</small>
             </div>
           `).join('');
         };

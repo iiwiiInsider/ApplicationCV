@@ -6,6 +6,7 @@ node_modules/
 dist/
 build/
 *.log
+*.mq5
 
 # Local/generated helpers (keep repo clean)
 DEPLOYMENT_SUCCESS.md
